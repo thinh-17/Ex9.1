@@ -1,61 +1,131 @@
-/* The styles for the elements */
-body { 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 85%;
-    margin-left: 2em;
-    margin-right: 2em;
-    width: 400px;
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1 {     
-    font-size: 140%;
-    color: teal;
-    margin-bottom: .5em;    
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    background: #f4f7f9;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
 }
-h2 {     
-    font-size: 120%;
-    color: teal;
-    margin-bottom: .5em;    
+
+/* Tiêu đề */
+h1, h2 {
+    color: #008080; /* teal */
+    margin-bottom: 10px;
+    font-weight: 600;
 }
+h1 {
+    font-size: 28px;
+    border-bottom: 3px solid #008080;
+    padding-bottom: 5px;
+}
+h2 {
+    font-size: 22px;
+}
+
+/* Label + Input */
 label {
-    float: left;
-    width: 7em;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-}
-input[type="text"], input[type="email"] {  /* An attribute selector */
-    width: 15em;
-    margin-left: 0.5em;    
-    margin-bottom: 0.5em;
-}
-span {
-    margin-left: 0.5em;    
-    margin-bottom: 0.5em;    
-}
-br {
-    clear: both;
+    display: inline-block;
+    width: 140px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
 }
 
-/* The styles for the tables */
+input[type="text"], input[type="email"], input[type="password"], select {
+    width: 250px;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #008080;
+    box-shadow: 0 0 5px rgba(0, 128, 128, 0.5);
+}
+
+/* Nút bấm */
+button, input[type="submit"] {
+    background: #008080;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #006666;
+}
+
+/* Bảng */
 table {
-    border: 1px solid black;
+    width: 100%;
+    margin-top: 20px;
     border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-th, td {
-    border: 1px solid black;
+th {
+    background: #008080;
+    color: white;
     text-align: left;
-    padding: .5em;
+    padding: 12px;
+    font-size: 15px;
+}
+td {
+    padding: 12px;
+    border-top: 1px solid #eee;
+}
+tr:nth-child(even) {
+    background: #f9f9f9;
 }
 
-/* The styles for the classes */
+/* Class tiện ích */
 .pad_top {
-    padding-top: 0.25em;
+    padding-top: 8px;
 }
 .margin_left {
-    margin-left: 0.5em;
+    margin-left: 8px;
 }
 .align_left {
     text-align: left;
 }
 .align_right {
-    text-align: left;
+    text-align: right;
+}
+
+/* Link album */
+p a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    background-color: #008080;
+    padding: 25px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
